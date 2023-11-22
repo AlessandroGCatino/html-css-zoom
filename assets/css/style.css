@@ -5,19 +5,20 @@ box-sizing: border-box;
 }
 html{
     font-family: sans-serif;
+    font-size: 12px;
 }
 .call-display{
     display: flex;
     width: 100vw;
     height: 100vh;
     flex-wrap: wrap;
-    overflow: scroll;
+    overflow: auto;
     justify-content: center;
     align-items: center;
     column-gap: 5px;
     padding: 100px;
-
     background-color: black;
+    position: relative;
 }
 
 .guest{
@@ -34,20 +35,58 @@ img{
 .name{
     content: "Pinco pallo";
     background-color: rgba(0, 0, 0, 0.4);
-    font-size: 12px;
+    /* font-size: 12px; */
     color: white;
     padding: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
 }
-/* .call-display figure::after{
-    content: "Pincopallo";
-    background-color: rgba(0, 0, 0, 0.4);
-    font-size: 12px;
-    color: white;
-    padding: 5px;
+
+.display-options{
     position: absolute;
+    top:5px;
+    right:5px;
+}
+
+.display-button{
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.display-button:hover{
+    cursor: pointer;
+}
+
+.app-buttons{
+    background-color: #222222;
+    color: white;
+    position: fixed;
     bottom: 0;
-    left: 25px;
-} */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-instruments{
+    padding: 10px;
+}
+
+.zoom-button{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+.end-call{
+    padding: 15px;
+    /* font-size: 12px; */
+    color: red;
+    background-color: #4a4a4a;
+}
